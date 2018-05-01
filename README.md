@@ -2,12 +2,14 @@
 
 ## 概要
 
-* 本リポジトリはUdemyの「Reactアプリケーション開発入門」コースで扱うソースコードを管理するためのものです。
+
+* 本リポジトリはUdemyの「[フロントエンドエンジニアのためのReactアプリケーション開発入門](https://www.udemy.com/react-application-development/)」コースで扱うソースコードを管理するためのものです。
 * アプリケーションが動作する最新の状態を確認する場合は、以下のコマンドで`latest`ブランチをcheckout してください。
     ```bash
     $ git checkout -t origin/latest
     ```
-* コース内ではレクチャー終了時にブランチをコミットしている場合があります。特定のブランチをチェックアウトしたい場合も以下のようにcheckoutしてご確認頂けます。
+* コース内ではレクチャー終了時にブランチをコミットしている場合があります。
+* 特定のブランチをチェックアウトしたい場合も以下のようにcheckoutしてご確認頂けます。
     ```bash
     # e.g.) redux-basics ブランチをcheckoutする場合
     $ git checkout -t origin/redux-basics
