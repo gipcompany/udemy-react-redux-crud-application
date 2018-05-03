@@ -1,9 +1,8 @@
-# Reactアプリケーション開発入門
+# フロントエンドエンジニアのためのReact・Reduxアプリケーション開発入門
 
 ## 概要
 
-
-* 本リポジトリはUdemyの「[フロントエンドエンジニアのためのReactアプリケーション開発入門](https://www.udemy.com/react-application-development/)」コースで扱うソースコードを管理するためのものです。
+* 本リポジトリはUdemyの「[フロントエンドエンジニアのためのReact・Reduxアプリケーション開発入門](https://www.udemy.com/react-application-development/)」コースで扱うソースコードを管理するためのものです。
 * アプリケーションが動作する最新の状態を確認する場合は、以下のコマンドで`latest`ブランチをcheckout してください。
     ```bash
     $ git checkout -t origin/latest
