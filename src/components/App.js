@@ -17,7 +17,7 @@ class App extends Component {
   }
 }
 
-const mapStateToProps = state => ({ value: state.count.value })
+const mapStateToProps = state => ({ value: state.name.value })
 
 // const mapDispatchToProps = dispatch => ({
 //   increment: () => dispatch(increment()),
