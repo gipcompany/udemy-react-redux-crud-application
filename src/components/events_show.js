@@ -20,6 +20,9 @@ class EventsShow extends Component {
   }
 
   renderField(field) {
+    console.log("this in renderField: ", this)
+    console.log("上記のthisはundefinedとして出力されるはずです。なぜならbindしていないからです。")
+    console.log("なぜrenderFieldに関してはbindしなかったのかというと、renderFieldの処理の中では、thisというコンテキストが不要だからです。")
     const { input, label, type, meta: { touched, error } } = field
 
     return (
@@ -41,6 +44,10 @@ class EventsShow extends Component {
   }
 
   async onSubmit(values) {
+    console.log("                  this in onSubmit: ", this)
+    console.log("                  こちらのthisはundefinedとはならず、EventsShowのインスタンスが出力されます。なぜならbindしているからです。")
+    console.log("                  なぜbindしているのかというと、EventsShowコンポーネントのインスタンスが保持するpropsを下記のように参照する必要があるからです。")
+    console.log("                  例: await this.props.putEvent(values)")
     await this.props.putEvent(values)
     this.props.history.push('/')
   }
