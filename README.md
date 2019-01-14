@@ -1,8 +1,8 @@
 # フロントエンドエンジニアのためのReact・Reduxアプリケーション開発入門
 
-## 概要
+## 説明
 
-* 本リポジトリはUdemyの「[フロントエンドエンジニアのためのReact・Reduxアプリケーション開発入門](https://www.udemy.com/react-application-development/)」コースで扱うソースコードを管理するためのものです。
+* 本リポジトリはUdemyの「[フロントエンドエンジニアのためのReact・Reduxアプリケーション開発入門](https://www.udemy.com/react-application-development/?couponCode=GITHUB-REPO-README)」コースで扱うソースコードを管理するためのものです。
 * アプリケーションが動作する最新の状態を確認する場合は、以下のコマンドで`latest`ブランチをcheckout してください。
     ```bash
     $ git checkout -t origin/latest
@@ -17,11 +17,12 @@
     ```bash
     $ git log --oneline --abbrev-commit --all
     ```
+* その他、ご不明な点がありましたら、遠慮泣くUdemyの[Q&A](https://www.udemy.com/react-application-development/learn/v4/questions)でお問い合わせください。
 
 <div align='right'>
-Happy Coding,
+Dive into Hacking!
 
 Udemy プログラミング講師
 
-[石田 敦志(Atsushi Ishida)](https://www.udemy.com/user/76100880-5658-4a37-be77-5525d39a4726/)
+[はむ - プログラミングおじさん](https://www.udemy.com/user/76100880-5658-4a37-be77-5525d39a4726/)
 </div>
