@@ -9,6 +9,7 @@ class EventsNew extends Component {
   constructor(props) {
     super(props)
     this.onSubmit = this.onSubmit.bind(this)
+    this.handleOnSubmit = this.handleOnSubmit.bind(this)
   }
 
   renderField(field) {
@@ -27,11 +28,16 @@ class EventsNew extends Component {
     this.props.history.push('/')
   }
 
+  handleOnSubmit(event) {
+    console.log({event})
+    event.preventDefault()
+  }
+
   render() {
     const { handleSubmit, pristine, submitting } = this.props
 
     return (
-      <form onSubmit={handleSubmit(this.onSubmit)}>
+      <form onSubmit={this.handleOnSubmit}>
         <div><Field label="Title" name="title" type="text" component={this.renderField} /></div>
         <div><Field label="Body" name="body" type="text" component={this.renderField} /></div>
 
