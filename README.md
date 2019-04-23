@@ -17,7 +17,7 @@
     ```bash
     $ git log --oneline --abbrev-commit --all
     ```
-* その他、ご不明な点がありましたら、遠慮泣くUdemyの[Q&A](https://www.udemy.com/react-application-development/learn/v4/questions)でお問い合わせください。
+* その他、ご不明な点がありましたら、遠慮なくUdemyの[Q&A](https://www.udemy.com/react-application-development/learn/v4/questions)でお問い合わせください。
 
 
 ## 動画コース一覧
