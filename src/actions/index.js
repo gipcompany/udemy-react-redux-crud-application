@@ -1,3 +1,6 @@
+// https://github.com/axios/axios
+// プロミスベースのHTTPクライアントです。
+// 2019年5月時点で5万8千のスターが付いている有名なパッケージです。
 import axios from 'axios'
 
 export const READ_EVENTS = 'READ_EVENTS'
@@ -9,6 +12,12 @@ export const DELETE_EVENT = 'DELETE_EVENT'
 const ROOT_URL = 'https://udemy-utils.herokuapp.com/api/v1'
 const QUERYSTRING = '?token=token123'
 
+// 以下に列挙する関数は全てAction Creatorsです。
+// 通常だと、Action CreatorsはActionをreturnしなければいけませんが
+// redux-thunkを導入することでActionの代わりに関数をreturnすることができるようになります。
+// 以下のAction Creators全ては関数を返します。
+//
+// axiosは非同期処理です。
 export const readEvents = () => async dispatch => {
   const response = await axios.get(`${ROOT_URL}/events${QUERYSTRING}`)
   dispatch({ type: READ_EVENTS, response })
