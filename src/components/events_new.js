@@ -71,7 +71,7 @@ const validate = values => {
   return errors
 }
 
-const mapDispatchToProps = ({ postEvent })
+const mapDispatchToProps = { postEvent }
 
 // コンポーネントをreduxFormでwrapする(decorateするとも言ったりします)ことで
 // コンポーネントのpropsが拡張され、pristine、submitting、invalid等の属性が追加されます。
