@@ -9,6 +9,9 @@ import App from './components/App';
 import registerServiceWorker from './registerServiceWorker';
 
 const store = createStore(reducer)
+console.log({ store })
+console.log({ state: store.getState() })
+console.log({ value: store.getState().count.value })
 
 ReactDOM.render(
   <Provider store={store}>
