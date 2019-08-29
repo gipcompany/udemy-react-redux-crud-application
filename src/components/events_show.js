@@ -68,11 +68,16 @@ const validate = values => {
 
 const mapStateToProps = (state, ownProps) => {
   const event = state.events[ownProps.match.params.id]
+  console.log({ "initialValuesに渡されるevent: ": event })
   return { initialValues: event, event }
 }
 
 const mapDispatchToProps = ({ deleteEvent, getEvent, putEvent })
 
 export default connect(mapStateToProps, mapDispatchToProps)(
-  reduxForm({ validate, form: 'eventShowForm', enableReinitialize: true })(EventsShow)
+  // reduxForm({ validate, form: 'eventShowForm', enableReinitialize: true })(EventsShow)
+  // 下記、enableReinitializeの指定が無い場合は
+  // https://redux-form.com/7.3.0/docs/api/reduxform.md/ にも「Defaults to false」と記載があるように、
+  // enableReinitialize は defaultとして設定されます。
+  reduxForm({ validate, form: 'eventShowForm' })(EventsShow)
 )
