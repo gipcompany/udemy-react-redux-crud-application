@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, {Component} from 'react';
 import { connect } from 'react-redux'
 import _ from 'lodash'
 import { Link } from 'react-router-dom'
@@ -9,18 +9,18 @@ import {
   TableHeaderColumn,
   TableRow,
   TableRowColumn
-} from 'material-ui/Table'
-import FloatingActionButton from 'material-ui/FloatingActionButton'
-import ContentAdd from 'material-ui/svg-icons/content/add'
+} from 'material-ui'
+import { FloatingActionButton } from 'material-ui/FloatingActionButton'
+import { ContentAdd } from 'material-ui/svg-icons/content/add'
 
 import { readEvents } from '../actions'
 
 class EventsIndex extends Component {
-  componentDidMount() {
+  componentDidMount(){
     this.props.readEvents()
   }
 
-  renderEvents() {
+  renderEvents(){
     return _.map(this.props.events, event => (
       <TableRow key={event.id}>
         <TableRowColumn>{event.id}</TableRowColumn>
@@ -34,15 +34,10 @@ class EventsIndex extends Component {
     ))
   }
 
-  render() {
-    const style = {
-      position: "fixed",
-      right: 12,
-      bottom: 12
-    }
+  render(){
     return (
       <React.Fragment>
-        <FloatingActionButton style={style} containerElement={<Link to="/events/new" />}>
+        <FloatingActionButton containerElement={<Link to="/events/new" />}>
           <ContentAdd />
         </FloatingActionButton>
 
