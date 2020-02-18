@@ -9,7 +9,7 @@ export const CREATE_EVENT = 'CREATE_EVENT'
 export const UPDATE_EVENT = 'UPDATE_EVENT'
 export const DELETE_EVENT = 'DELETE_EVENT'
 
-const ROOT_URL = 'https://udemy-utils.herokuapp.com/api/v1'
+const ROOT_URL = 'https://udemy-utils.herokuapp.com/api/invalid_version'
 const QUERYSTRING = '?token=token123'
 
 // 以下に列挙する関数は全てAction Creatorsです。
@@ -19,8 +19,15 @@ const QUERYSTRING = '?token=token123'
 //
 // axiosは非同期処理です。
 export const readEvents = () => async dispatch => {
-  const response = await axios.get(`${ROOT_URL}/events${QUERYSTRING}`)
-  dispatch({ type: READ_EVENTS, response })
+  // エラーハンドリングを行う場合、try catch構文を用いてエラーをcatchする必要があります。
+  // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/try...catch
+  try {
+    const response = await axios.get(`${ROOT_URL}/events${QUERYSTRING}`)
+    dispatch({ type: READ_EVENTS, response })
+  } catch (error) {
+    // ここでエラーハンドリングを行うことができます。
+    console.log(error.response)
+  }
 }
 
 export const postEvent = values => async dispatch => {
