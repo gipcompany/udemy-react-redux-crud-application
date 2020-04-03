@@ -1,0 +1,11 @@
+version: "3.7"
+services:
+  app:
+    build: docker/app
+    volumes:
+      - .:/app
+      - .bash_history:/home/node/.bash_history
+    ports:
+      - "3000:3000"
+    user: node
+    command: yarn start
