@@ -2,8 +2,9 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux'
 import { Field, reduxForm } from 'redux-form'
 import { Link } from 'react-router-dom'
+import axios from 'axios'
 
-import { postEvent } from '../actions'
+import { ROOT_URL, QUERYSTRING, CREATE_EVENT } from '../actions'
 
 class EventsNew extends Component {
   constructor(props) {
@@ -53,7 +54,14 @@ const validate = values => {
   return errors
 }
 
-const mapDispatchToProps = ({ postEvent })
+const mapDispatchToProps = dispatch => {
+  return {
+    postEvent: async values => {
+      const response = await axios.post(`${ROOT_URL}/events${QUERYSTRING}`, values)
+      dispatch({ type: CREATE_EVENT, response })
+    }
+  }
+}
 
 export default connect(null, mapDispatchToProps)(
   reduxForm({ validate, form: 'eventNewForm' })(EventsNew)
