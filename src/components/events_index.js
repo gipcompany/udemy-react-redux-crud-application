@@ -20,20 +20,12 @@ class EventsIndex extends Component {
   }
 
   render() {
-    return (
-      <table>
-        <thead>
-          <tr>
-            <th>ID</th>
-            <th>Title</th>
-            <th>Body</th>
-          </tr>
-        </thead>
+    const props = this.props
 
-        <tbody>
-          {this.renderEvents()}
-        </tbody>
-      </table>
+    return (
+      <React.Fragment>
+        <div>{console.log(props.events)}</div>
+      </React.Fragment>
     )
   }
 }
