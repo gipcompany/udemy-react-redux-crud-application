@@ -37,18 +37,9 @@
 
 
 
-<div align='right'>
-Dive into Hacking!
-</div>
-<div align='right'>
-Udemy プログラミング講師
-</div>
+
 <div align='right'>
 
-[はむ - プログラミングおじさん](https://www.udemy.com/user/76100880-5658-4a37-be77-5525d39a4726/)
+[はむさんのオンラインスクール](https://diveintohacking.com/)
 
 </div>
-
-
-
-
